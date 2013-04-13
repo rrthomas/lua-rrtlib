@@ -1,9 +1,5 @@
-Standard Lua libraries
-======================
-
-by the [rrtlib project][github]
-
-[github]: http://github.com/rrthomas/lua-rrtlib/ "Github repository"
+rrtlib: Ad-hoc Lua libraries
+============================
 
 [![travis-ci status](https://secure.travis-ci.org/rrthomas/lua-rrtlib.png?branch=master)](http://travis-ci.org/rrthomas/lua-rrtlib/builds)
 
