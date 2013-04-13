@@ -11,5 +11,5 @@
 /luarocks
 /luarocks-config.lua
 /release-notes-*
-/stdlib-*.tar.gz
+/rrtlib-*.tar.gz
 /*.rockspec

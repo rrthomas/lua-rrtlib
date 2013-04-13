@@ -1,11 +1,11 @@
 Standard Lua libraries
 ======================
 
-by the [stdlib project][github]
+by the [rrtlib project][github]
 
-[github]: http://github.com/rrthomas/lua-stdlib/ "Github repository"
+[github]: http://github.com/rrthomas/lua-rrtlib/ "Github repository"
 
-[![travis-ci status](https://secure.travis-ci.org/rrthomas/lua-stdlib.png?branch=master)](http://travis-ci.org/rrthomas/lua-stdlib/builds)
+[![travis-ci status](https://secure.travis-ci.org/rrthomas/lua-rrtlib.png?branch=master)](http://travis-ci.org/rrthomas/lua-rrtlib/builds)
 
 
 This is a collection of Lua libraries for Lua 5.1 and 5.2. The
@@ -13,8 +13,7 @@ libraries are copyright by their authors 2000-2013 (see the AUTHORS
 file for details), and released under the MIT license (the same
 license as Lua itself). There is no warranty.
 
-The standard subset of stdlib has no prerequisites beyond a standard
-Lua system. The following modules have extra dependencies:
+Rrtlib requires stdlib. The following modules have extra dependencies:
 
     fstable: Lua 5.2, lfs, luaposix
 
@@ -22,21 +21,17 @@ Lua system. The following modules have extra dependencies:
 Installation
 ------------
 
-The simplest way to install stdlib is with [LuaRocks][]. To install the
-latest release (recommended):
+The simplest way to install rrtlib is with [LuaRocks][]. rrtlib does
+not have formal releases, so to install current git master:
 
-    luarocks install stdlib
-
-To install current git master (for testing):
-
-    luarocks install https://raw.github.com/rrthomas/lua-stdlib/release/stdlib-git-1.rockspec
+    luarocks install https://raw.github.com/rrthomas/lua-rrtlib/release/rrtlib-git-1.rockspec
 
 To install without LuaRocks, check out the sources from the
 [repository][github], and then run the following commands: the
 dependencies are listed in the dependencies entry of the file
-`stdlib-rockspec.lua`. You will also need autoconf and automake.
+`rrtlib-rockspec.lua`. You will also need autoconf and automake.
 
-    cd lua-stdlib
+    cd lua-rrtlib
     autoreconf --force --version --install
     ./configure --prefix=INSTALLATION-ROOT-DIRECTORY
     make all check install
@@ -44,18 +39,14 @@ dependencies are listed in the dependencies entry of the file
 See [INSTALL][] for instructions for `configure`.
 
 [luarocks]: http://www.luarocks.org "LuaRocks Project"
-[install]: https://raw.github.com/rrthomas/lua-stdlib/master/INSTALL
+[install]: https://raw.github.com/rrthomas/lua-rrtlib/master/INSTALL
 
 Use
 ---
 
-As well as requiring individual libraries, you can load the standard
-set with
+For a library "foo", use something like:
 
-    require "std"
-
-Modules not in the standard set may be removed from future versions of
-stdlib.
+    foo = require "rrt.foo"
 
 
 Documentation
@@ -64,7 +55,7 @@ Documentation
 The libraries are [documented in LuaDoc][github.io]. Pre-built HTML
 files are included.
 
-[github.io]: http://rrthomas.github.io/lua-stdlib
+[github.io]: http://rrthomas.github.io/lua-rrtlib
 
 
 Bug reports and code contributions

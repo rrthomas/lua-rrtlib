@@ -11,16 +11,14 @@ local default = {
   package = package_name,
   version = version.."-1",
   source = {
-    url = "git://github.com/rrthomas/lua-stdlib.git",
+    url = "git://github.com/rrthomas/lua-rrtlib.git",
   },
   description = {
-    summary = "General Lua libraries",
+    summary = "Ad-hoc Lua libraries",
     detailed = [[
-    stdlib is a library of modules for common programming tasks,
-    including list, table and functional operations, regexps, objects,
-    pickling, pretty-printing and getopt.
+    rrtlib is an ad-hoc library of modules for various tasks.
  ]],
-    homepage = "http://github.com/rrthomas/lua-stdlib/",
+    homepage = "http://github.com/rrthomas/lua-rrtlib/",
     license = "MIT/X11",
   },
   dependencies = {

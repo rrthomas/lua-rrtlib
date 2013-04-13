@@ -5,10 +5,10 @@
 ## Environment. ##
 ## ------------ ##
 
-std_path = $(abs_srcdir)/?.lua;$(abs_srcdir)/std/?.lua
+rrt_path = $(abs_srcdir)/?.lua;$(abs_srcdir)/rrt/?.lua
 
 LUA_PATH ?= ;
-LUA_ENV = LUA_PATH="$(std_path);$(LUA_PATH)"
+LUA_ENV = LUA_PATH="$(rrt_path);$(LUA_PATH)"
 
 
 ## ---------- ##
@@ -36,7 +36,7 @@ dist_doc_DATA		=
 dist_files_DATA		=
 dist_modules_DATA	=
 
-include std/std.mk
+include rrt/rrt.mk
 include specs/specs.mk
 
 

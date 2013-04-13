@@ -22,13 +22,6 @@ SPECL_MIN  = 5
 ## ------ ##
 
 specl_SPECS =					\
-	$(srcdir)/specs/debug_ext_spec.yaml	\
-	$(srcdir)/specs/getopt_spec.yaml	\
-	$(srcdir)/specs/io_ext_spec.yaml	\
-	$(srcdir)/specs/math_ext_spec.yaml	\
-	$(srcdir)/specs/package_ext_spec.yaml	\
-	$(srcdir)/specs/string_ext_spec.yaml	\
-	$(srcdir)/specs/table_ext_spec.yaml	\
 	$(NOTHING_ELSE)
 
 check_local += specs-check-local
