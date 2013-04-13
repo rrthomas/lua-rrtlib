@@ -11,7 +11,7 @@ Makefile: Makefile.in
 Makefile.in:
 	./bootstrap
 
-else
+endif
 
 # Use 'make check V=1' for verbose output, or set SPECL_OPTS to
 # pass alternative options to specl command.
@@ -47,50 +47,3 @@ rockspecs: luarocks-config.lua $(srcdir)/build-aux/mkrockspecs $(ROCKSPEC_TEMPLA
 	$(AM_V_at)$(MKROCKSPECS) $(PACKAGE) git $(ROCKSPEC_TEMPLATE)
 
 GIT ?= git
-
-tag-release:
-	$(GIT) diff --exit-code && \
-	$(GIT) tag -f -a -m "Release tag" v$(VERSION)
-
-define unpack-distcheck-release
-	rm -rf $(PACKAGE)-$(VERSION)/ && \
-	tar zxf ../$(PACKAGE)/$(PACKAGE)-$(VERSION).tar.gz && \
-	cp -a -f $(PACKAGE)-$(VERSION)/* . && \
-	rm -rf $(PACKAGE)-$(VERSION)/ && \
-	echo "unpacked $(PACKAGE)-$(VERSION).tar.gz over current directory" && \
-	echo './configure && make all rockspecs' && \
-	./configure --version && ./configure && \
-	$(MAKE) all rockspecs
-endef
-
-check-in-release: distcheck
-	cd ../$(PACKAGE)-release && \
-	$(unpack-distcheck-release) && \
-	$(GIT) add . && \
-	$(GIT) commit -a -m "Release v$(VERSION)" && \
-	$(GIT) tag -f -a -m "Full source release tag" release-v$(VERSION)
-
-
-## To test the release process without publishing upstream, use:
-##   make release WOGER=: GIT_PUBLISH=:
-GIT_PUBLISH ?= $(GIT)
-WOGER ?= woger
-
-WOGER_ENV = LUA_INIT= LUA_PATH='$(abs_srcdir)/?-git-1.rockspec'
-WOGER_OUT = $(WOGER_ENV) $(LUA) -l$(PACKAGE) -e
-
-release: rockspecs
-	$(MAKE) tag-release && \
-	$(MAKE) check-in-release && \
-	$(GIT_PUBLISH) push && $(GIT_PUBLISH) push --tags && \
-	LUAROCKS_CONFIG=$(abs_srcdir)/luarocks-config.lua luarocks \
-	  --tree=$(abs_srcdir)/luarocks build $(PACKAGE)-$(VERSION)-1.rockspec && \
-	$(WOGER) lua \
-	  package=$(PACKAGE) \
-	  package_name=$(PACKAGE_NAME) \
-	  version=$(VERSION) \
-	  notes=release-notes-$(VERSION) \
-	  home="`$(WOGER_OUT) 'print (description.homepage)'`" \
-	  description="`$(WOGER_OUT) 'print (description.summary)'`"
-
-endif
