@@ -15,27 +15,6 @@ nobase_dist_lua_DATA = 			\
 	rrt/xml.lua			\
 	$(NOTHING_ELSE)
 
-## But, `require "rrt"` for core module.
-dist_lua_DATA =				\
-	rrt/rrt.lua			\
-	$(NOTHING_ELSE)
-
-# In order to avoid regenerating rrt.lua at configure time, which
-# causes the documentation to be rebuilt and hence requires users to
-# have luadoc installed, put rrt/rrt.lua in as a Makefile dependency.
-# (Strictly speaking, distributing an AC_CONFIG_FILE would be wrong.)
-rrt/rrt.lua: rrt/rrt.lua.in
-	./config.status --file=$@
-
-
-## ------------- ##
-## Distribution. ##
-## ------------- ##
-
-EXTRA_DIST +=				\
-	rrt/rrt.lua.in			\
-	$(NOTHING_ELSE)
-
 
 ## -------------- ##
 ## Documentation. ##
