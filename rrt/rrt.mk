@@ -5,9 +5,9 @@
 ## Build. ##
 ## ------ ##
 
-## Use, e.g. `require "rrt.list"` for individual modules.
 nobase_dist_lua_DATA = 			\
 	rrt/bin.lua			\
+	rrt/csv.lua			\
 	rrt/fstable.lua			\
 	rrt/lcs.lua			\
 	rrt/mbox.lua			\
