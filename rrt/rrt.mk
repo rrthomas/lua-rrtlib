@@ -10,6 +10,7 @@ nobase_dist_lua_DATA = 			\
 	rrt/csv.lua			\
 	rrt/fstable.lua			\
 	rrt/lcs.lua			\
+	rrt/list.lua			\
 	rrt/mbox.lua			\
 	rrt/parser.lua			\
 	rrt/xml.lua			\
