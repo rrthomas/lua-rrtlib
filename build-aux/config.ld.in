@@ -1,0 +1,23 @@
+-- -*- lua -*-
+title = "@PACKAGE_STRING@ Reference"
+project = "@PACKAGE_STRING@"
+description = "Ad-hoc Lua Libraries"
+dir = "."
+
+file = {
+  -- Modules
+  "../lib/rrt/bin.lua",
+  "../lib/rrt/csv.lua",
+  "../lib/rrt/fstable.lua",
+  "../lib/rrt/lcs.lua",
+  "../lib/rrt/list.lua",
+  "../lib/rrt/mbox.lua",
+  "../lib/rrt/parser.lua",
+  "../lib/rrt/xml.lua",
+}
+
+new_type ("object", "Objects", false, "Fields")
+
+format = "markdown"
+backtick_references = false
+sort = true
