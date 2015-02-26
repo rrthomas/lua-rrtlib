@@ -7,12 +7,11 @@ AM_INIT_AUTOMAKE([foreign])
 AM_SILENT_RULES([yes])
 
 dnl Lua
-AC_SUBST([LUA_MIN_VERSION], [5.1])
-AX_PROG_LUA([$LUA_MIN_VERSION], [5.3])
+AX_PROG_LUA([5.1], [5.4])
 
-AX_WITH_PROG([LUADOC], [luadoc], [:])
+AX_WITH_PROG([LDOC], [ldoc], [:])
 
 dnl Generate output files
 AC_CONFIG_MACRO_DIR(m4)
-AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES([Makefile build-aux/config.ld])
 AC_OUTPUT

@@ -4,14 +4,14 @@ rrtlib: Ad-hoc Lua libraries
 [![travis-ci status](https://secure.travis-ci.org/rrthomas/lua-rrtlib.png?branch=master)](http://travis-ci.org/rrthomas/lua-rrtlib/builds)
 
 
-This is a collection of Lua libraries for Lua 5.1 and 5.2. The
-libraries are copyright by their authors 2000-2013 (see the AUTHORS
-file for details), and released under the MIT license (the same
-license as Lua itself). There is no warranty.
+This is a collection of Lua libraries for Lua >= 5.1. The libraries are
+copyright by their authors 2000-2013 (see the AUTHORS file for details), and
+released under the MIT license (the same license as Lua itself). There is no
+warranty.
 
 Rrtlib requires stdlib. The following modules have extra dependencies:
 
-    fstable: Lua 5.2, lfs, luaposix
+    fstable: Lua >= 5.2, lfs, luaposix
 
 
 Installation
