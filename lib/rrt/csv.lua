@@ -1,9 +1,10 @@
+--- CSV utilities.
+
 require "std"
 
--- Convert to/from CSV.
+--- Convert to/from CSV.
 -- To include the separator in a string, enclose it in double quotes.
 -- To escape a double-quote character, repeat it.
-
 function CSVToTable (l, sep)
   local t = {}
   local i = 1

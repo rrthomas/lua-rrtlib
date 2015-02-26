@@ -1,3 +1,5 @@
+--- Functions removed from stdlib's `list` module.
+
 --- Make an index of a list of tables on a given field.
 -- Requires that each field's value be distinct.
 -- @param f field

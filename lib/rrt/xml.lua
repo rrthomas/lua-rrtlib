@@ -1,4 +1,4 @@
--- XML extensions to string module.
+--- XML extensions to string module.
 -- @class module
 -- @name xml
 
@@ -13,7 +13,7 @@ local string = require "std.string_ext"
 -- and the sub-elements are held in the integer keys
 -- @param indent indent between levels (default: <code>"\t"</code>)
 -- @param spacing space before every line
--- @returns XML string
+-- @treturn string XML string
 function string.writeXML (t, indent, spacing)
   indent = indent or "\t"
   spacing = spacing or ""
