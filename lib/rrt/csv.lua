@@ -51,7 +51,7 @@ end
 -- Public interface
 local M = {
   CSVToTable = CSVToTable,
-  tableTOCSV = tableToCSV,
+  tableToCSV = tableToCSV,
 }
 
 return M
