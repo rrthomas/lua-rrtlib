@@ -40,7 +40,7 @@ local function CSVToTable (l, sep)
 end
 
 -- FIXME: Don't insert redundant quotes (so we get closer to idempotent round-trip)
-function tableToCSV (t, sep)
+local function tableToCSV (t, sep)
   return table.concat (list.map (function (s)
                                    return '"' .. s:gsub ('"', '""') .. '"'
                                  end,
