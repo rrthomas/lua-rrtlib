@@ -1,6 +1,7 @@
 --- CSV utilities.
 
-require "std"
+local std = require "std"
+local list = require "std.list"
 
 --- Convert to/from CSV.
 -- To include the separator in a string, enclose it in double quotes.
@@ -41,10 +42,11 @@ end
 
 -- FIXME: Don't insert redundant quotes (so we get closer to idempotent round-trip)
 local function tableToCSV (t, sep)
-  return table.concat (list.map (function (s)
-                                   return '"' .. s:gsub ('"', '""') .. '"'
-                                 end,
-                                 t),
+  return table.concat (functional.map (function (s)
+                                         return '"' .. s:gsub ('"', '""') .. '"'
+                                       end,
+                                       std.ielems,
+                                       t),
                        sep or ',')
 end
 
