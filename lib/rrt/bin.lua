@@ -18,6 +18,7 @@ local function le_to_hex (s)
   return res
 end
 
+-- Public interface
 local M = {
   le_to_number = le_to_number,
   le_to_hex    = le_to_hex,

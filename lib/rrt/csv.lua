@@ -47,3 +47,11 @@ function tableToCSV (t, sep)
                                  t),
                        sep or ',')
 end
+
+-- Public interface
+local M = {
+  CSVToTable = CSVToTable,
+  tableTOCSV = tableToCSV,
+}
+
+return M

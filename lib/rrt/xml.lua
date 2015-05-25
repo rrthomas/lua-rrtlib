@@ -3,7 +3,7 @@
 -- @name xml
 
 require "std.base"
-local string = require "std.string_ext"
+local string = require "std.string"
 
 
 --- Write a table as XML.
@@ -14,7 +14,7 @@ local string = require "std.string_ext"
 -- @param indent indent between levels (default: <code>"\t"</code>)
 -- @param spacing space before every line
 -- @treturn string XML string
-function string.writeXML (t, indent, spacing)
+local function writeXML (t, indent, spacing)
   indent = indent or "\t"
   spacing = spacing or ""
   return render (t,
@@ -73,3 +73,10 @@ function string.writeXML (t, indent, spacing)
                    return ""
                  end)
 end
+
+-- Public interface
+local M = {
+  writeXML = writeXML,
+}
+
+return M

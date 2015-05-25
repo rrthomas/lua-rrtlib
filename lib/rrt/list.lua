@@ -32,3 +32,11 @@ function index_value (f, l)
   end
   return r
 end
+
+-- Public interface
+local M = {
+  index_key   = index_key,
+  index_value = index_value,
+}
+
+return M
