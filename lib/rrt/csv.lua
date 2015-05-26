@@ -1,6 +1,7 @@
 --- CSV utilities.
 
 local std = require "std"
+local functional = require "std.functional"
 local list = require "std.list"
 
 --- Convert to/from CSV.
