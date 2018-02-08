@@ -9,7 +9,7 @@ AM_SILENT_RULES([yes])
 dnl Lua
 AX_PROG_LUA([5.1], [5.4])
 
-AX_WITH_PROG([LDOC], [ldoc], [:])
+AC_PATH_PROG([LDOC], [ldoc], [:])
 
 dnl Generate output files
 AC_CONFIG_MACRO_DIR(m4)
