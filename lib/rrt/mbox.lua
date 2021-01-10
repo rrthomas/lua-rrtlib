@@ -1,5 +1,5 @@
 --- mbox parser.
--- Based on code by Diego Nahab.
+-- Based on code by Diego Nehab.
 
 local function headers (s)
   local header = {}
