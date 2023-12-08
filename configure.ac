@@ -7,7 +7,7 @@ AM_INIT_AUTOMAKE([foreign])
 AM_SILENT_RULES([yes])
 
 dnl Lua
-AX_PROG_LUA([5.1], [5.4])
+AX_PROG_LUA([5.1], [5.5])
 
 AC_PATH_PROG([LDOC], [ldoc], [:])
 
