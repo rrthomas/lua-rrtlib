@@ -63,7 +63,6 @@ dist_luarrt_DATA =			\
 	lib/rrt/fstable.lua		\
 	lib/rrt/lcs.lua			\
 	lib/rrt/list.lua		\
-	lib/rrt/mbox.lua		\
 	lib/rrt/parser.lua		\
 	lib/rrt/xml.lua			\
 	$(NOTHING_ELSE)
@@ -98,7 +97,6 @@ dist_modules_DATA +=				\
 	$(srcdir)/doc/modules/fstable.html	\
 	$(srcdir)/doc/modules/lcs.html		\
 	$(srcdir)/doc/modules/list.html		\
-	$(srcdir)/doc/modules/mbox.html		\
 	$(srcdir)/doc/modules/parser.html	\
 	$(srcdir)/doc/modules/xml.html		\
 	$(NOTHING_ELSE)

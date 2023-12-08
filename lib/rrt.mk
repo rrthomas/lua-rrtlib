@@ -11,7 +11,6 @@ nobase_dist_lua_DATA = 			\
 	rrt/fstable.lua			\
 	rrt/lcs.lua			\
 	rrt/list.lua			\
-	rrt/mbox.lua			\
 	rrt/parser.lua			\
 	rrt/xml.lua			\
 	$(NOTHING_ELSE)
